@@ -1,2 +1,2 @@
-# SoftUni-Software-Engineering
-SoftUni Software Engineering Main Program
+# JavaScript-Programming-Basics
+JS basics description here
