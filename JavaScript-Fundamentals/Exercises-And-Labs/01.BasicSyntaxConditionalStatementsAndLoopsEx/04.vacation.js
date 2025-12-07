@@ -5,7 +5,7 @@ function vacation(numOfGroup,typeOfGroup,dayOfWeek){
             price = numOfGroup * 8.45;
         } else if(dayOfWeek === 'Saturday'){
             price = numOfGroup * 9.80;
-        }else if(dayOfWeek === 'Sunday'){
+        } else if(dayOfWeek === 'Sunday'){
             price = numOfGroup * 10.46;
         }
         if(numOfGroup >= 30){
@@ -17,7 +17,7 @@ function vacation(numOfGroup,typeOfGroup,dayOfWeek){
             price = numOfGroup * 10.90;
         } else if(dayOfWeek === 'Saturday'){
             price = numOfGroup * 15.60;
-        }else if(dayOfWeek === 'Sunday'){
+        } else if(dayOfWeek === 'Sunday'){
             price = numOfGroup * 16;
         }
         if(numOfGroup >= 100){
@@ -36,7 +36,7 @@ function vacation(numOfGroup,typeOfGroup,dayOfWeek){
             price = numOfGroup * 15;
         } else if(dayOfWeek === 'Saturday'){
             price = numOfGroup * 20;
-        }else if(dayOfWeek === 'Sunday'){
+        } else if(dayOfWeek === 'Sunday'){
             price = numOfGroup * 22.50;
         }
         if (numOfGroup >= 10 && numOfGroup <= 20) {

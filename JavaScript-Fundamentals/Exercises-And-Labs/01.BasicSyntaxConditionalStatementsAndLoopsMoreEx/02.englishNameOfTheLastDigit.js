@@ -21,10 +21,8 @@ function englishNameOfTheLastDigit(num){
             break;
         case 0: console.log('zero');
             break;                            
-    
         default:
             break;
     }
-    
 }
 englishNameOfTheLastDigit(1239)

@@ -1,5 +1,5 @@
 function numbersFromMtoN(m,n){
-  for (i =m;i >= n;i--){
+  for (i = m;i >= n;i--){
     console.log(i);
   }
 }

@@ -1,65 +1,19 @@
 function sortNumbers(firstNum,secondNum,thirdNum){
+  let arr = [];
+  arr.push(firstNum,secondNum,thirdNum);
 
- if (firstNum > secondNum && firstNum > thirdNum && secondNum > thirdNum) {
-     console.log(firstNum);
-     console.log(secondNum);
-     console.log(thirdNum);
- }
-  else if(firstNum > secondNum && firstNum > thirdNum && thirdNum > secondNum){
-     console.log(firstNum);
-     console.log(thirdNum);
-     console.log(secondNum);
-  }
-  else if(secondNum > firstNum && secondNum > thirdNum && firstNum > thirdNum){
-     console.log(secondNum);
-     console.log(firstNum);
-     console.log(thirdNum);
-  }
-  else if(secondNum > firstNum && secondNum > thirdNum && thirdNum > firstNum){
-     console.log(secondNum);
-     console.log(thirdNum);
-     console.log(firstNum);
-  }
-  else if(thirdNum > firstNum && thirdNum > secondNum && firstNum > secondNum){
-    console.log(thirdNum);
-    console.log(firstNum);
-    console.log(secondNum);
-  }
-  else if(thirdNum > firstNum && thirdNum > secondNum && secondNum > firstNum){
-    console.log(thirdNum);
-    console.log(secondNum);
-    console.log(firstNum);
-  }
-  else if(firstNum === secondNum && thirdNum > firstNum){
-    console.log(thirdNum);
-    console.log(firstNum);
-    console.log(secondNum);
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i];
+    let j = i - 1;
 
+    while (j >= 0 && arr[j] < key) {
+      arr[j + 1] = arr[j];
+      j = j - 1;
+    }
+    arr[j + 1] = key;
   }
-  else if(firstNum === secondNum && thirdNum < firstNum){
-      console.log(firstNum);
-      console.log(secondNum);
-      console.log(thirdNum);
-  }
-  else if(secondNum === thirdNum && firstNum > secondNum) {
-      console.log(firstNum);
-      console.log(secondNum);
-      console.log(thirdNum);
-  }
-  else if(secondNum === thirdNum && firstNum < secondNum){
-      console.log(secondNum);
-      console.log(thirdNum);
-      console.log(firstNum);
-  }
-  else if(firstNum === thirdNum && secondNum > firstNum){
-      console.log(secondNum);
-      console.log(firstNum);
-      console.log(thirdNum);
-  }
-  else if(firstNum === thirdNum && secondNum < firstNum){
-      console.log(firstNum);
-      console.log(thirdNum);
-      console.log(secondNum);
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
   }
 }
-sortNumbers(0,0,2)
+sortNumbers(5,6,13)

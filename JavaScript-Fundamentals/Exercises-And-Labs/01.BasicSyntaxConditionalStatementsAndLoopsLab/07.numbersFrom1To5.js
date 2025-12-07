@@ -3,4 +3,4 @@ function numbersFrom1To5(){
         console.log(i);
     }
 }
-NumbersFrom1To5();
+numbersFrom1To5();
