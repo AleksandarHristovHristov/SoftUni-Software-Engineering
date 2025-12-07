@@ -1,5 +1,5 @@
 function pyramidOfKingDjoser(base,increment){
-    let stepArea = 0;
+    
     let stoneRequired = 0;
     let marbleRequired = 0;
     let lapisLazuliRequired = 0;
@@ -14,17 +14,17 @@ while(base >= 1) {
         break;
     }
     stepsCounter++;
+    let perimeter = 4 * base;
     if (stepsCounter % 5 === 0) {
-        lapisLazuliRequired += ((4 * base) - 4) * increment;
+        lapisLazuliRequired += (perimeter - 4) * increment;
     }
-    else{
-        marbleRequired +=((4 * base) - 4)*increment;
+    else {
+        marbleRequired += (perimeter - 4) * increment;
     }
-    
     base -= 2;
-    stoneRequired += (base * base) * increment;
+    let stepArea = base * base;
+    stoneRequired += stepArea * increment;
     
-
 }
     pyramidHeight = stepsCounter * increment;
     console.log(`Stone required: ${Math.ceil(stoneRequired)}`);
@@ -32,6 +32,5 @@ while(base >= 1) {
     console.log(`Lapis Lazuli required: ${Math.ceil(lapisLazuliRequired)}`);
     console.log(`Gold required: ${Math.ceil(goldRequired)}`);
     console.log(`Final pyramid height: ${Math.trunc(pyramidHeight)}`);
-
 }
 pyramidOfKingDjoser(11,1);
